@@ -1,24 +1,34 @@
-<<<<<<< HEAD
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# ✨ Magic Scrapbook
 
-# Run and deploy your AI Studio app
+An interactive, autism-friendly digital journal designed to encourage creativity, emotional awareness, and memory keeping.
 
-This contains everything you need to run your app locally.
+## 🎨 Features
 
-View your app in AI Studio: https://ai.studio/apps/drive/1OGYwnalAntqdOTzrQ0P6CBScA5JqeEoU
+- **Art Room**: A creative space to draw, upload photos, and write stories.
+  - **AI Magic Wand**: Uses Google Gemini to automatically expand your stories based on your drawings.
+- **Mood Checker**: A gamified daily check-in system.
+  - Track **Mood** (Emojis), **Water** (Hydration), **Sleep** (Stars), **Energy** (Battery), and **Gratitude**.
+  - Generates a "Daily Snapshot" card upon submission.
+- **Memories Vault**: A secure gallery to view all your saved drawings and mood snapshots.
+- **Quote Display**: Delivers positive affirmations to brighten your day.
 
-## Run Locally
+## 🛠️ Tech Stack
 
-**Prerequisites:**  Node.js
+- **Frontend**: React, TypeScript, TailwindCSS, Vite
+- **Backend**: Node.js, Express
+- **Database**: MongoDB
+- **AI**: Google Gemini API
 
+## 🚀 Getting Started
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
-=======
-# Autism--Journal
->>>>>>> a61719d16e930a139bbfdfaa526a65c7f9ab95ae
+1.  **Install dependencies** (in both root and server folders):
+    ```bash
+    npm install
+    cd server && npm install
+    ```
+2.  **Environment Setup**:
+    - Create a `.env` in the root with `VITE_GEMINI_API_KEY=your_key_here`.
+    - Create a `.env` in `server/` with `MONGODB_URI=your_mongo_url`.
+3.  **Run the App**:
+    - Frontend: `npm run dev`
+    - Backend: `cd server && npm run dev`
