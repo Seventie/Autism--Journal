@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Magic Scrapbook</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&family=Gaegu:wght@400;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        // Shim for process.env.API_KEY
+        window.process = {
+            env: {
+                API_KEY: "" // This will be injected or accessible via the environment logic
+            }
+        };
+        
+        window.tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#4C9AFF",
+                        "pastel-blue": "#E3F2FD",
+                        "background-light": "#F0F7FF",
+                        "background-dark": "#101922",
+                        "paper-white": "#FFFFFF",
+                        "lined-blue": "#D1E9FF"
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"],
+                        "handwritten": ["Gaegu", "cursive"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1.5rem",
+                        "3xl": "2.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .lined-paper {
+                background-image: linear-gradient(#D1E9FF 1px, transparent 1px);
+                background-size: 100% 3rem;
+                line-height: 3rem;
+            }
+            .canvas-shadow {
+                box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+            }
+            .scrapbook-bg {
+                background-color: #E3F2FD;
+                background-image: radial-gradient(#BFDBFE 1px, transparent 1px);
+                background-size: 20px 20px;
+            }
+            .polaroid-tilt-left { transform: rotate(-2deg); }
+            .polaroid-tilt-right { transform: rotate(2deg); }
+            .magic-wand-glow { filter: drop-shadow(0 0 12px rgba(168, 85, 247, 0.6)); }
+            .sticker { filter: drop-shadow(2px 2px 0px rgba(0,0,0,0.1)); }
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom": "https://esm.sh/react-dom@^19.2.3",
+    "react-dom/client": "https://esm.sh/react-dom@^19.2.3/client",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.12.0",
+    "@google/genai": "https://esm.sh/@google/genai@^1.35.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="scrapbook-bg text-[#0d141b]">
+    <div id="root"></div>
+    <script type="module" src="index.tsx"></script>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
