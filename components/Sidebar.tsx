@@ -37,6 +37,15 @@ const Sidebar: React.FC = () => {
           <span className="material-symbols-outlined text-3xl text-yellow-400 group-hover:scale-110 transition-transform">mood</span>
           <span className="text-base font-bold">Mood Tracker</span>
         </NavLink>
+        <a
+          href="https://fsf-two.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-4 px-4 py-3 rounded-2xl transition-all group hover:bg-pastel-blue"
+        >
+          <span className="material-symbols-outlined text-3xl text-purple-400 group-hover:scale-110 transition-transform">calculate</span>
+          <span className="text-base font-bold">LAB EVAL - 2</span>
+        </a>
       </nav>
 
       <div className="mt-auto bg-white border-2 border-dashed border-blue-200 p-4 rounded-2xl flex items-center gap-3">

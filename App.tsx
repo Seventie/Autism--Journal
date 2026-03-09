@@ -4,6 +4,7 @@ import ArtRoom from './components/ArtRoom';
 import Memories from './components/Memories';
 import Sidebar from './components/Sidebar';
 import MoodChecker from './components/MoodChecker';
+import LabEval from './components/LabEval';
 
 const App: React.FC = () => {
   return (
@@ -16,6 +17,7 @@ const App: React.FC = () => {
             <Route path="/art-room" element={<ArtRoom />} />
             <Route path="/memories" element={<Memories />} />
             <Route path="/mood-checker" element={<MoodChecker />} />
+            <Route path="/lab-eval" element={<LabEval />} />
             <Route path="*" element={<ArtRoom />} />
           </Routes>
         </main>
